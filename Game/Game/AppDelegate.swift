@@ -9,13 +9,22 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,ChartboostDelegate {
 
     var window: UIWindow?
-
+    var gameCenter: GameCenterController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        gameCenter = GameCenterController()
+        
+        // Begin a user session. Must not be dependent on user actions or any prior network requests.
+        
+        let kChartboostAppID = "55139cf4c909a63ed8cce4ca";
+        let kChartboostAppSignature = "b8b3d04a034294573049a75f778ffdd3c188e625";
+        
+        Chartboost.startWithAppId(kChartboostAppID, appSignature: kChartboostAppSignature, delegate: self);
+        Chartboost.cacheMoreApps(CBLocationHomeScreen)
+        
         return true
     }
 
@@ -35,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+
     }
 
     func applicationWillTerminate(application: UIApplication) {
