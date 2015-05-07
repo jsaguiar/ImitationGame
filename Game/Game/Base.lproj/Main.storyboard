@@ -43,6 +43,15 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="fge-Yz-YHM"/>
                                 </connections>
                             </adBannerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBV-Jx-r3T">
+                                <rect key="frame" x="277" y="195" width="76" height="30"/>
+                                <state key="normal" title="Multiplayer">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="G0M-Qc-r5y" kind="show" id="yml-l5-Vzy"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39i-u6-dfk" userLabel="Banner">
                                 <rect key="frame" x="140" y="550" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -87,6 +96,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1169" y="639"/>
+        </scene>
+        <!--Multiplayer View Controller-->
+        <scene sceneID="5du-Ms-CSH">
+            <objects>
+                <viewController id="G0M-Qc-r5y" customClass="MultiplayerViewController" customModule="Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Lp-tc-xUw"/>
+                        <viewControllerLayoutGuide type="bottom" id="VUf-gc-gy6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OPY-nQ-i5O">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hnc-cT-duu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2043" y="843"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="o79-jl-htu">
@@ -495,14 +522,6 @@
                                 <exclude reference="c0L-4f-oU3"/>
                                 <exclude reference="iQV-9F-ftO"/>
                                 <exclude reference="z6E-kg-aVw"/>
-                                <exclude reference="FwQ-AV-0ZF"/>
-                                <exclude reference="Qwf-bK-JsL"/>
-                                <exclude reference="ROi-4Z-11Z"/>
-                                <exclude reference="Enh-P8-dve"/>
-                                <exclude reference="IOD-2Z-Kqo"/>
-                                <exclude reference="17R-i2-xFm"/>
-                                <exclude reference="f91-mI-kpG"/>
-                                <exclude reference="gPn-V0-cSz"/>
                                 <exclude reference="3Zv-qA-FDc"/>
                                 <exclude reference="5OX-uV-prr"/>
                                 <exclude reference="92b-Ur-Ztc"/>
@@ -510,23 +529,32 @@
                                 <exclude reference="TAd-Zi-TXu"/>
                                 <exclude reference="ZXq-Xh-QxF"/>
                                 <exclude reference="g3t-SW-k6j"/>
+                                <exclude reference="B2K-SE-fww"/>
+                                <exclude reference="Bg7-D2-FCZ"/>
+                                <exclude reference="GY2-LP-RBA"/>
+                                <exclude reference="aZ4-Pv-fDP"/>
+                                <exclude reference="glD-UB-Nfg"/>
+                                <exclude reference="FwQ-AV-0ZF"/>
+                                <exclude reference="Qwf-bK-JsL"/>
+                                <exclude reference="ROi-4Z-11Z"/>
                                 <exclude reference="gFD-n7-Lth"/>
                                 <exclude reference="geg-JT-W3n"/>
                                 <exclude reference="kS2-kz-02k"/>
                                 <exclude reference="lIi-Dk-fkB"/>
                                 <exclude reference="sDE-29-BfT"/>
                                 <exclude reference="zPH-PW-kFM"/>
-                                <exclude reference="B2K-SE-fww"/>
-                                <exclude reference="Bg7-D2-FCZ"/>
-                                <exclude reference="GY2-LP-RBA"/>
-                                <exclude reference="aZ4-Pv-fDP"/>
-                                <exclude reference="glD-UB-Nfg"/>
+                                <exclude reference="Enh-P8-dve"/>
+                                <exclude reference="IOD-2Z-Kqo"/>
+                                <exclude reference="17R-i2-xFm"/>
+                                <exclude reference="f91-mI-kpG"/>
+                                <exclude reference="gPn-V0-cSz"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="mCy-cI-ECh"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="bannerView" destination="NWx-Ly-FuD" id="gLI-FN-byc"/>
                         <outlet property="blueView" destination="uCj-kx-Wqs" id="sTA-0p-HTI"/>
                         <outlet property="centerLabel" destination="6U0-pr-lTv" id="6ko-OW-774"/>
                         <outlet property="centerView" destination="Iig-40-8A2" id="Jff-gZ-vit"/>

@@ -8,8 +8,9 @@
 
 import UIKit
 import AudioToolbox
+import iAd
 
-class GameViewController: UIViewController,UIGestureRecognizerDelegate {
+class GameViewController: MainViewController,UIGestureRecognizerDelegate, ADBannerViewDelegate {
     
     let blueBtnColor = UIColor(red: 0.0, green: 0.0, blue: 1, alpha: 1)
     let redBtnColor = UIColor(red: 1, green: 0.0, blue: 0.0, alpha: 1)
@@ -28,7 +29,7 @@ class GameViewController: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var gameOverView: ILTranslucentView!
     @IBOutlet weak var levelLostLabel: UILabel!
     @IBOutlet weak var livesLabel: UILabel!
-    
+        
     var sadImage:UIImageView = UIImageView(image:UIImage(named: "sad63.png"))
     var happyImage:UIImageView = UIImageView(image:UIImage(named: "emoticon5.png"))
     
@@ -63,6 +64,8 @@ class GameViewController: UIViewController,UIGestureRecognizerDelegate {
         self.happyImage.clipsToBounds = true
         self.happyImage.contentMode = UIViewContentMode.ScaleAspectFill
         
+        reinitGame()
+        
         
     }
     
@@ -73,38 +76,50 @@ class GameViewController: UIViewController,UIGestureRecognizerDelegate {
         self.greenView.backgroundColor=greenBtnColor
         self.yellowView.backgroundColor=yellowBtnColor
         playingArray.removeAll(keepCapacity: false)
-        playingArray=[]
         animatingPress=0
         numberOfPlayerPress=0
         showingAnimtation=false
         lives=3
         self.livesLabel.text = "\(lives)"
+        generateLevel()
+    }
+    
+    func nextLevel(){
+        generateLevel()
+        showLevel()
     }
     
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        startLevel()
+        showLevel()
     }
     
     func replay(){
         self.numberOfPlayerPress = 0
-        self.animatingPress=0
-        self.showingAnimtation = true
+        self.animatingPress = 0
         var dispatchTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(0.5 * Double(NSEC_PER_SEC)))
+        
+        println("REPLAY\n playingArray.count = \(playingArray.count)\n animatingPress = \(self.animatingPress)")
+        
         dispatch_after(dispatchTime, dispatch_get_main_queue(), {
             self.animatePress(self.playingArray[self.animatingPress])
         })
         
     }
     
-    func startLevel(){
+    func generateLevel(){
         self.numberOfPlayerPress=0
         var a:Int = Int(arc4random_uniform(425)) % 4
         println(a)
         self.playingArray.append(a)
         self.centerLabel.text = "\(self.playingArray.count)"
-        
+        self.animatingPress=0
+        self.showingAnimtation = true
+    }
+    
+    func showLevel(){
+        self.numberOfPlayerPress = 0
         self.animatingPress=0
         self.showingAnimtation = true
         
@@ -256,7 +271,7 @@ class GameViewController: UIViewController,UIGestureRecognizerDelegate {
                         self.centerView.backgroundColor = UIColor.whiteColor()
                         self.happyImage.removeFromSuperview()
                     },
-                    completion: {finished in self.startLevel()
+                    completion: {finished in self.nextLevel()
                 })
         })
 
@@ -367,7 +382,7 @@ class GameViewController: UIViewController,UIGestureRecognizerDelegate {
             animations: {
                 self.gameOverView.alpha = 0
             },
-            completion:{finished in self.startLevel()}
+            completion:{finished in self.showLevel()}
         )
     }
     

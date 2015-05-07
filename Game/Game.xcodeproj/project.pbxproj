@@ -11,6 +11,7 @@
 		CF205B2B1AC39CC8006D90D5 /* emoticon5.png in Resources */ = {isa = PBXBuildFile; fileRef = CF205B291AC39CC8006D90D5 /* emoticon5.png */; };
 		CF205B2C1AC39CC8006D90D5 /* sad63.png in Resources */ = {isa = PBXBuildFile; fileRef = CF205B2A1AC39CC8006D90D5 /* sad63.png */; };
 		CF205B2E1AC3A279006D90D5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF205B2D1AC3A279006D90D5 /* AudioToolbox.framework */; };
+		CF3F9D0D1AD04F2600EC167E /* MultiplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F9D0C1AD04F2600EC167E /* MultiplayerViewController.swift */; };
 		CF6C47351AC3B5B6005EEFBB /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6C47341AC3B5B6005EEFBB /* GameKit.framework */; };
 		CF6C47371AC3B7A0005EEFBB /* GameCenterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6C47361AC3B7A0005EEFBB /* GameCenterController.swift */; };
 		CF6C47401AC3D8DC005EEFBB /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6C473F1AC3D8DC005EEFBB /* GoogleMobileAds.framework */; };
@@ -20,13 +21,14 @@
 		CFB2E5A91AC2858B00F3A350 /* cross37.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB2E5A71AC2858B00F3A350 /* cross37.png */; };
 		CFB2E5AD1AC28F8F00F3A350 /* cross_black.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB2E5AC1AC28F8F00F3A350 /* cross_black.png */; };
 		CFB2E5AF1AC2902500F3A350 /* heart365.png in Resources */ = {isa = PBXBuildFile; fileRef = CFB2E5AE1AC2902500F3A350 /* heart365.png */; };
+		CFBC67DE1ACD94B600F6BF6B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC67DD1ACD94B600F6BF6B /* GameViewController.swift */; };
+		CFBC67E21ACD953A00F6BF6B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC67E11ACD953A00F6BF6B /* MainViewController.swift */; };
 		CFDCFEAF1AC2270200193CF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCFEAE1AC2270200193CF6 /* AppDelegate.swift */; };
 		CFDCFEB11AC2270200193CF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCFEB01AC2270200193CF6 /* ViewController.swift */; };
 		CFDCFEB41AC2270200193CF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFDCFEB21AC2270200193CF6 /* Main.storyboard */; };
 		CFDCFEB61AC2270200193CF6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFDCFEB51AC2270200193CF6 /* Images.xcassets */; };
 		CFDCFEB91AC2270200193CF6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFDCFEB71AC2270200193CF6 /* LaunchScreen.xib */; };
 		CFDCFEC51AC2270200193CF6 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCFEC41AC2270200193CF6 /* GameTests.swift */; };
-		CFDCFECF1AC2299800193CF6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCFECE1AC2299800193CF6 /* GameViewController.swift */; };
 		CFE485971AC84B3A0096373E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE485961AC84B3A0096373E /* iAd.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,7 @@
 		CF205B291AC39CC8006D90D5 /* emoticon5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoticon5.png; sourceTree = "<group>"; };
 		CF205B2A1AC39CC8006D90D5 /* sad63.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad63.png; sourceTree = "<group>"; };
 		CF205B2D1AC3A279006D90D5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CF3F9D0C1AD04F2600EC167E /* MultiplayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplayerViewController.swift; sourceTree = "<group>"; };
 		CF6C47341AC3B5B6005EEFBB /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		CF6C47361AC3B7A0005EEFBB /* GameCenterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCenterController.swift; sourceTree = "<group>"; };
 		CF6C473F1AC3D8DC005EEFBB /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = ../GoogleMobileAds.framework; sourceTree = "<group>"; };
@@ -55,6 +58,8 @@
 		CFB2E5A71AC2858B00F3A350 /* cross37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross37.png; sourceTree = "<group>"; };
 		CFB2E5AC1AC28F8F00F3A350 /* cross_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross_black.png; sourceTree = "<group>"; };
 		CFB2E5AE1AC2902500F3A350 /* heart365.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart365.png; sourceTree = "<group>"; };
+		CFBC67DD1ACD94B600F6BF6B /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		CFBC67E11ACD953A00F6BF6B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CFDCFEA91AC2270200193CF6 /* Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDCFEAD1AC2270200193CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFDCFEAE1AC2270200193CF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +70,6 @@
 		CFDCFEBE1AC2270200193CF6 /* GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDCFEC31AC2270200193CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFDCFEC41AC2270200193CF6 /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
-		CFDCFECE1AC2299800193CF6 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		CFE485961AC84B3A0096373E /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -143,10 +147,12 @@
 			children = (
 				CFB2E5A51AC2857F00F3A350 /* Images */,
 				CFB2E5A31AC279CF00F3A350 /* ILTranslucentView.swift */,
+				CFBC67E11ACD953A00F6BF6B /* MainViewController.swift */,
 				CFDCFEAE1AC2270200193CF6 /* AppDelegate.swift */,
 				CFDCFEB01AC2270200193CF6 /* ViewController.swift */,
-				CFDCFECE1AC2299800193CF6 /* GameViewController.swift */,
+				CF3F9D0C1AD04F2600EC167E /* MultiplayerViewController.swift */,
 				CF6C47361AC3B7A0005EEFBB /* GameCenterController.swift */,
+				CFBC67DD1ACD94B600F6BF6B /* GameViewController.swift */,
 				CFDCFEB21AC2270200193CF6 /* Main.storyboard */,
 				CFDCFEB51AC2270200193CF6 /* Images.xcassets */,
 				CFDCFEB71AC2270200193CF6 /* LaunchScreen.xib */,
@@ -294,9 +300,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFBC67DE1ACD94B600F6BF6B /* GameViewController.swift in Sources */,
 				CFDCFEB11AC2270200193CF6 /* ViewController.swift in Sources */,
 				CFB2E5A41AC279CF00F3A350 /* ILTranslucentView.swift in Sources */,
-				CFDCFECF1AC2299800193CF6 /* GameViewController.swift in Sources */,
+				CF3F9D0D1AD04F2600EC167E /* MultiplayerViewController.swift in Sources */,
+				CFBC67E21ACD953A00F6BF6B /* MainViewController.swift in Sources */,
 				CF6C47371AC3B7A0005EEFBB /* GameCenterController.swift in Sources */,
 				CFDCFEAF1AC2270200193CF6 /* AppDelegate.swift in Sources */,
 			);

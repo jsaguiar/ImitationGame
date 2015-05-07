@@ -10,9 +10,8 @@ import UIKit
 import GameKit
 import iAd
 
-class ViewController: UIViewController,GKGameCenterControllerDelegate, ADBannerViewDelegate{
+class ViewController: MainViewController,GKGameCenterControllerDelegate, ADBannerViewDelegate{
     
-    @IBOutlet weak var bannerView: ADBannerView!
     let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
 
     override func viewDidLoad() {
@@ -41,31 +40,5 @@ class ViewController: UIViewController,GKGameCenterControllerDelegate, ADBannerV
     }
     
     
-    //BannerView delegate
-    func bannerViewWillLoadAd(banner: ADBannerView!) {
-        
-    }
-    func bannerViewDidLoadAd(banner: ADBannerView!) {
-        println("add loaded")
-        
-        UIView.animateWithDuration(0.5, animations: {
-                self.bannerView.alpha = 1
-            }
-            , completion: nil)
-    }
-    
-    func bannerViewActionShouldBegin(banner: ADBannerView!, willLeaveApplication willLeave: Bool) -> Bool {
-        return true
-    }
-    
-    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
-        println("error loading \(error.description)")
-        
-        UIView.animateWithDuration(0.5, animations: {
-            self.bannerView.alpha = 0
-            }
-            , completion: nil)
-
-    }
 }
 

@@ -123,7 +123,7 @@ class GameCenterController {
         })
         
     }
-    
+        
     //USE ONLY FOR TESTING -> NOT REVERSABLE
     func resetAchivements(){
         GKAchievement.resetAchievementsWithCompletionHandler({(error:NSError!) -> Void in
@@ -133,5 +133,8 @@ class GameCenterController {
         })
         
     }
+    
+    
+    
     
 }
