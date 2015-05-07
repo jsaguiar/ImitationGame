@@ -74,7 +74,7 @@ class GameCenterController {
         let score = GKScore(leaderboardIdentifier: self.leaderboardIdentifier)
         score.value = Int64(level)
         var scoreArray: [GKScore] = [score]
-        GKScore.reportScores(scoreArray, {(error : NSError!) -> Void in
+        GKScore.reportScores(scoreArray, withCompletionHandler: {(error : NSError!) -> Void in
             if error != nil {
                 NSLog(error.localizedDescription)
             }

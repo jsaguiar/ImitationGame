@@ -39,7 +39,7 @@ class GameViewController: MainViewController,UIGestureRecognizerDelegate, ADBann
     var showingAnimtation:Bool=false
     var lives:Int=3
     
-    let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
     
     override func viewDidLoad() {

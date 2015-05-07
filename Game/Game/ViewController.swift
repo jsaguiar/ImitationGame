@@ -12,7 +12,7 @@ import iAd
 
 class ViewController: MainViewController,GKGameCenterControllerDelegate, ADBannerViewDelegate{
     
-    let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()

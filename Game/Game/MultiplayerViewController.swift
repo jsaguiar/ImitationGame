@@ -17,7 +17,7 @@ protocol MultiplayerDelegate{
 
 
 class MultiplayerViewController: NSObject, GKMatchmakerViewControllerDelegate  /*gkturnedbased...*/{
-    let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var matchStarted = false
     var match:GKMatch?
     var delegate:MultiplayerDelegate?
